@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">Weidmann Reinigungen</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <script src="https://kit.fontawesome.com/a7b55340b3.js" crossorigin="anonymous"></script>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar">
+    <nav>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="Weidmann Reinigungen home">
+          <img src="assets/images/logo-full-bg.png" alt="Weidmann Reinigungen Logo">
+        </a>
+      </div>
+
+      <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="html/services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="html/about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="html/contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Controls (language + theme) -->
+      <div class="controls">
+        <!-- Language selector -->
+        <div class="language-dropdown">
+          <button id="langToggle" aria-label="Select language">
+            🌍 <span id="currentLang">DE</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <ul id="langMenu" class="dropdown-menu">
+            <li data-lang="de">Deutsch</li>
+            <li data-lang="en">English</li>
+            <li data-lang="fr">Français</li>
+            <li data-lang="it">Italiano</li>
+          </ul>
+        </div>
+
+        <!-- Theme toggle -->
+        <button id="themeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <section id="hero">
+      <img src="assets/images/afro-woman-holding-bucket-with-cleaning-items.jpg" alt="Cleaning service illustration" class="hero-img">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 data-i18n="hero.title">Your Trusted Swiss Cleaning Service</h1>
+        <p data-i18n="hero.subtitle">Professional, reliable, and local cleaning for homes and small businesses.</p>
+        <a href="html/contact.html" class="btn primary" data-i18n="hero.cta">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Placeholder for additional sections -->
+    <section id="services"></section>
+    <section id="about"></section>
+    <section class="testimonials">
+      <div class="services-container">
+        <h2 data-i18n="testimonials.title">What Our Clients Say</h2>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div>
+              <div class="star-rating" aria-label="5 star rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p data-i18n="testimonials.one.text">
+                Always reliable and extremely thorough. I trust her with my home completely.
+              </p>
+            </div>
+            <strong data-i18n="testimonials.one.author">Christian, Zürich</strong>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="star-rating" aria-label="5 star rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p data-i18n="testimonials.two.text">
+                Flexible, professional and very attentive to details. Highly recommended.
+              </p>
+            </div>
+            <strong data-i18n="testimonials.two.author">Patrizia, Männedorf</strong>
+          </article>
+
+          <article class="service-card">
+            <div>
+              <div class="star-rating" aria-label="5 star rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p data-i18n="testimonials.three.text">
+                Great communication and excellent results every time.
+              </p>
+            </div>
+            <strong data-i18n="testimonials.three.author">Alexandra, Zollikon</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 Weidmann Reinigungen. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/+41792200948" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Global JS -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

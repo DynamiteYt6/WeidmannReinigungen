@@ -1,0 +1,948 @@
+/* ======================================
+   CSS VARIABLES
+====================================== */
+:root {
+  --primary: #1d4ed8;
+  --secondary: #6b7280;
+  --bg-light: #f8fafc;
+  --bg-dark: #111827;
+  --text-light: #111827;
+  --text-dark: #e5e7eb;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1f2937;
+  --radius: 10px;
+  --transition: 0.3s ease;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ======================================
+   RESET & BASE
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background var(--transition), color var(--transition);
+  line-height: 1.6;
+}
+
+/* ======================================
+   NAVBAR
+====================================== */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--card-bg-light);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: background var(--transition);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  min-height: 70px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color var(--transition);
+  padding: 0.5rem 0;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--primary);
+  outline: none;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.controls button:hover,
+.controls button:focus {
+  color: var(--primary);
+  outline: none;
+}
+
+.language-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: var(--card-bg-light);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  list-style: none;
+  min-width: 140px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
+  font-size: 0.9rem;
+}
+
+.dropdown-menu li:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  font-size: 1.5rem !important;
+}
+
+/* ======================================
+   HERO SECTION
+====================================== */
+#hero {
+  position: relative;
+  margin-top: 70px;
+  height: 70vh;
+  min-height: 500px;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  width: 90%;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  line-height: 1.6;
+}
+
+/* ======================================
+   BUTTONS
+====================================== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--transition);
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+  background: white;
+  color: var(--primary);
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ======================================
+   SERVICES SECTION
+====================================== */
+.services-container {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-container h1,
+.services-container h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 3rem;
+  color: var(--text-light);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--card-bg-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Service card with image */
+.service-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transition);
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.1);
+}
+
+.service-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.service-content i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.service-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-light);
+}
+
+.service-content p {
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+/* ======================================
+   CONTACT FORM
+====================================== */
+form label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+form label span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius);
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  transition: border-color var(--transition), background var(--transition);
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ======================================
+   CONTACT METHODS (for contact page)
+====================================== */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-method {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--card-bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.contact-method:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.contact-method i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.contact-method h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.contact-method a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.contact-method a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.service-area {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card-bg-light);
+  border-radius: var(--radius);
+  margin: 3rem auto;
+  max-width: 600px;
+}
+
+.service-area i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Main content links */
+main a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+footer {
+  background: var(--card-bg-light);
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  color: var(--secondary);
+  transition: background var(--transition);
+}
+
+/* ======================================
+   WHATSAPP FLOAT
+====================================== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+  z-index: 999;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+/*Testimonials*/
+.testimonials {
+      background: var(--bg-light);
+      padding: 2rem 0;
+    }
+
+    .testimonials .service-card {
+      padding: 2rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+    }
+
+    .testimonials .service-card p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .testimonials .service-card p::before {
+      content: '"';
+      position: absolute;
+      left: 0;
+      top: -10px;
+      font-size: 3rem;
+      color: var(--primary);
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    .testimonials .service-card strong {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .testimonials .service-card strong::before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #3b82f6);
+      flex-shrink: 0;
+    }
+
+    .testimonials .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Star rating */
+    .star-rating {
+      color: #fbbf24;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.2rem;
+    }
+
+    /* Dark mode */
+    body.dark .testimonials {
+      background: var(--bg-dark);
+    }
+
+    body.dark .testimonials .service-card p {
+      color: var(--text-dark);
+    }
+
+    body.dark .testimonials .service-card strong {
+      color: #60a5fa;
+    }
+
+    /* About page specific styles */
+    .about-hero {
+      height: 40vh;
+      min-height: 300px;
+      /* background: linear-gradient(135deg, rgba(29, 78, 216, 0.9), rgba(59, 130, 246, 0.8)),
+                  url('../assets/images/cleaning-background.jpg'); */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1rem;
+    }
+
+    .about-block {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: var(--card-bg-light);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .about-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .about-block h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .about-block h2::before {
+      content: '';
+      width: 4px;
+      height: 2rem;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .about-block p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+
+    .values-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .values-list li {
+      padding: 1rem 1rem 1rem 3rem;
+      margin-bottom: 0.75rem;
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      position: relative;
+      font-size: 1.05rem;
+      color: var(--text-light);
+      transition: all var(--transition);
+    }
+
+    .values-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .values-list li:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .values-list li:hover::before {
+      background: white;
+      color: var(--primary);
+    }
+
+    /* Icon variations for each section */
+    .about-block:nth-child(1) h2::before {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    }
+
+    .about-block:nth-child(2) h2::before {
+      background: linear-gradient(135deg, #059669, #10b981);
+    }
+
+    .about-block:nth-child(3) h2::before {
+      background: linear-gradient(135deg, #dc2626, #ef4444);
+    }
+
+    .about-block:nth-child(4) h2::before {
+      background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    }
+
+    /* Dark mode */
+    body.dark .about-block {
+      background: var(--card-bg-dark);
+    }
+
+    body.dark .about-block p {
+      color: var(--text-dark);
+    }
+
+    body.dark .about-block h2 {
+      color: #60a5fa;
+    }
+
+    body.dark .values-list li {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.dark .values-list li:hover {
+      background: #60a5fa;
+      color: white;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      
+    }
+      
+    
+/* ======================================
+   DARK MODE
+====================================== */
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark #navbar,
+body.dark footer,
+body.dark .dropdown-menu {
+  background: var(--card-bg-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark .nav-links a,
+body.dark .controls button {
+  color: var(--text-dark);
+}
+
+body.dark .nav-links a:hover,
+body.dark .controls button:hover {
+  color: var(--primary);
+}
+
+/* Dark mode - Services */
+body.dark .services-container h1,
+body.dark .services-container h2 {
+  color: var(--text-dark);
+}
+
+body.dark .service-card {
+  background: var(--card-bg-dark);
+}
+
+body.dark .service-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .service-content h3 {
+  color: var(--text-dark);
+}
+
+body.dark .service-content p {
+  color: #9ca3af;
+}
+
+/* Dark mode - Contact */
+body.dark .contact-method,
+body.dark .contact-form,
+body.dark .service-area {
+  background: var(--card-bg-dark);
+}
+
+body.dark .contact-method h3 {
+  color: var(--text-dark);
+}
+
+body.dark form label span {
+  color: var(--text-dark);
+}
+
+body.dark form input,
+body.dark form textarea {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  border-color: #374151;
+}
+
+body.dark form input:focus,
+body.dark form textarea:focus {
+  border-color: var(--primary);
+}
+
+body.dark form input::placeholder,
+body.dark form textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+@media(max-width: 880px){
+  nav {
+    padding: 0.75rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background: var(--card-bg-light);
+    padding: 0;
+    box-shadow: var(--shadow);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+
+  body.dark .nav-links {
+    background: var(--card-bg-dark);
+  }
+
+  body.dark .nav-links li {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  #hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+@media(max-width: 600px){
+  .logo img {
+    height: 40px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .btn.primary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .services-container {
+    padding: 3rem 1rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+  .testimonials .service-card {
+        padding: 1.5rem;
+        min-height: auto;
+      }
+
+    .testimonials .service-card p {
+        font-size: 0.95rem;
+      }
+      .about-container {
+        padding: 3rem 1rem;
+      }
+
+      .about-block {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .about-block h2 {
+        font-size: 1.3rem;
+      }
+
+      .about-block p,
+      .values-list li {
+        font-size: 1rem;
+      }
+
+      .values-list li {
+        padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+      }
+
+      .values-list li::before {
+        left: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 0.8rem;
+      }
+}

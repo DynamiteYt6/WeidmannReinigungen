@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Weidmann Reinigungen for professional cleaning services in Zurich and surrounding areas.">
+  <title>Contact – Weidmann Reinigungen</title>
+
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav>
+      <div class="logo">
+        <a href="../index.html" aria-label="Weidmann Reinigungen home">
+          <img src="../assets/images/logo-full-bg.png" alt="Weidmann Reinigungen Logo">
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="controls">
+        <div class="language-dropdown">
+          <button id="langToggle" aria-label="Select language" aria-expanded="false">
+            <span>🌍</span> <span id="currentLang">DE</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <ul id="langMenu" class="dropdown-menu">
+            <li data-lang="de">Deutsch</li>
+            <li data-lang="en">English</li>
+            <li data-lang="fr">Français</li>
+            <li data-lang="it">Italiano</li>
+          </ul>
+        </div>
+
+        <button id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" style="height: 40vh; min-height: 300px;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-i18n="contact.heading">Get in Touch</h1>
+      <p data-i18n="contact.subtitle">Request a quote or ask a question — we're happy to help.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <main class="services-container">
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+      <div class="contact-method">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3 data-i18n="contact.whatsapp.title">WhatsApp</h3>
+        <a href="https://wa.me/+41792200948" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp.link">
+          Chat with us
+        </a>
+      </div>
+
+      <div class="contact-method">
+        <i class="fa-solid fa-envelope"></i>
+        <h3 data-i18n="contact.email.title">Email</h3>
+        <a href="mailto:weidmann.reinigungen@gmail.com">
+          weidmann.reinigungen@gmail.com
+        </a>
+      </div>
+
+      <div class="contact-method">
+        <i class="fa-solid fa-phone"></i>
+        <h3 data-i18n="contact.phone.title">Phone</h3>
+        <a href="tel:+41792200948">
+          +41 79 220 09 48
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+      <h2 style="text-align: center; margin: 3rem 0 2rem;" data-i18n="contact.form.title">Send us a message</h2>
+
+      <form action="https://formspree.io/f/xgovakpv"
+  method="POST" class="contact-form" id="contactForm">
+        <label>
+          <span data-i18n="contact.form.name">Name</span>
+          <input type="text" name="name" required>
+        </label>
+
+        <label>
+          <span data-i18n="contact.form.email">Email</span>
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          <span data-i18n="contact.form.phone">Phone (optional)</span>
+          <input type="tel" name="phone">
+        </label>
+
+        <label>
+          <span data-i18n="contact.form.message">Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <button type="submit">
+          <span data-i18n="contact.form.submit">Send Message</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+      <i class="fa-solid fa-location-dot"></i>
+      <h3 data-i18n="contact.info.heading">Service Area</h3>
+      <p data-i18n="contact.info.location">Zürich & Surroundings</p>
+      <p style="margin-top: 0.5rem; color: var(--secondary);" data-i18n="contact.info.availability">
+        Flexible availability
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Weidmann Reinigungen. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/+41792200948" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+
+  
+</body>
+</html>

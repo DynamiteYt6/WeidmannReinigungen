@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional cleaning services for homes and businesses in Switzerland">
+  <title>Our Services - Weidmann Reinigungen</title>
+
+  <link rel="icon" href="../assets/images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav>
+      <div class="logo">
+        <a href="../index.html" aria-label="Weidmann Reinigungen home">
+          <img src="../assets/images/logo-full-bg.png" alt="Weidmann Reinigungen Logo">
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="controls">
+        <div class="language-dropdown">
+          <button id="langToggle" aria-label="Select language" aria-expanded="false">
+            <span>🌍</span> <span id="currentLang">DE</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <ul id="langMenu" class="dropdown-menu">
+            <li data-lang="de">Deutsch</li>
+            <li data-lang="en">English</li>
+            <li data-lang="fr">Français</li>
+            <li data-lang="it">Italiano</li>
+          </ul>
+        </div>
+        <button id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="services-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-i18n="services.title">Our Services</h1>
+      <p data-i18n="services.subtitle">Professional cleaning tailored to your home or business in Switzerland.</p>
+      <a href="contact.html" class="btn primary" data-i18n="about.hero.cta">Book a Cleaning</a>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <main>
+    <section class="services-container">
+      <h2 data-i18n="services.heading">What We Offer</h2>
+      <div class="service-grid">
+        <!-- Home Cleaning -->
+        <div class="service-card">
+          <div class="service-content">
+            <i class="fa-solid fa-house"></i>
+            <h3 data-i18n="services.homeCleaning.title">Home Cleaning</h3>
+            <p data-i18n="services.homeCleaning.desc">Routine cleaning for kitchens, bathrooms, living spaces, bedrooms.</p>
+          </div>
+        </div>
+        <!-- Deep Cleaning -->
+        <div class="service-card">
+          <div class="service-content">
+            <i class="fa-solid fa-broom"></i>
+            <h3 data-i18n="services.deepCleaning.title">Deep Cleaning</h3>
+            <p data-i18n="services.deepCleaning.desc">Highly detailed cleaning — baseboards, appliances, nooks and crannies.</p>
+          </div>
+        </div>
+
+        <!-- Office Cleaning -->
+        <div class="service-card">
+         
+          <div class="service-content">
+            <i class="fa-solid fa-building"></i>
+            <h3 data-i18n="services.officeCleaning.title">Office Cleaning</h3>
+            <p data-i18n="services.officeCleaning.desc">Professional office cleaning to maintain a productive work environment.</p>
+          </div>
+        </div>
+
+        <!-- End of Tenancy -->
+        <div class="service-card">
+          
+          <div class="service-content">
+            <i class="fa-solid fa-box-open"></i>
+            <h3 data-i18n="services.endTenancy.title">End of Tenancy</h3>
+            <p data-i18n="services.endTenancy.desc">Thorough cleaning when moving out to ensure deposit return.</p>
+          </div>
+        </div>
+
+        <!-- Staircase Cleaning -->
+        <div class="service-card">
+         
+          <div class="service-content">
+            <i class="fa-solid fa-stairs"></i>
+            <h3 data-i18n="services.staircaseCleaning.title">Staircase Cleaning</h3>
+            <p data-i18n="services.staircaseCleaning.desc">Regular maintenance of common areas and staircases in buildings.</p>
+          </div>
+        </div>
+        <!-- Post-Construction Cleaning -->
+        <div class="service-card">
+         
+          <div class="service-content">
+            <i class="fa-solid fa-helmet-safety"></i>
+            <h3 data-i18n="services.postConstruction.title">Post-Construction Cleaning</h3>
+            <p data-i18n="services.postConstruction.desc">Takes care of dust, debris, paint splatters, and leftover materials after renovations.</p>
+          </div>
+        </div>
+        <!-- Window Cleaning -->
+        <div class="service-card">
+         
+          <div class="service-content">
+            <i class="fa-solid fa-window-maximize"></i>
+            <h3 data-i18n="services.windowCleaning.title">Window Cleaning</h3>
+            <p data-i18n="services.windowCleaning.desc">Interior and exterior window washing (including frames & sills).</p>
+          </div>
+        </div>
+        <!-- Event Cleanup -->
+        <div class="service-card">
+         
+          <div class="service-content">
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <h3 data-i18n="services.eventCleanup.title">Event Cleanup</h3>
+            <p data-i18n="services.eventCleanup.desc">Before/after cleaning for small corporate events or gatherings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Weidmann Reinigungen. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/+41792200948" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
