@@ -114,3 +114,9 @@
       // Reset form
       this.reset();
     });
+
+    //Mailchimp Form
+    document.addEventListener("DOMContentLoaded", () => {
+  const lang = localStorage.getItem("lang") || "EN";
+  document.getElementById("mc-language").value = lang.toUpperCase();
+});

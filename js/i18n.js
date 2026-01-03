@@ -15,7 +15,7 @@ const translations = {
     // Homepage Hero
     'hero.title': 'Your Trusted Swiss Cleaning Service',
     'hero.subtitle': 'Professional, reliable, and local cleaning for homes and small businesses.',
-    'hero.cta': 'Book Now',
+    'hero.cta': 'Get a Free Quote!',
 
     // Footer
     'footer.rights': 'All rights reserved.',
@@ -133,7 +133,7 @@ const translations = {
     // Homepage Hero
     'hero.title': 'Ihr vertrauenswürdiger Schweizer Reinigungsdienst',
     'hero.subtitle': 'Professionelle, zuverlässige und lokale Reinigung für Haushalte und Unternehmen.',
-    'hero.cta': 'Jetzt buchen',
+    'hero.cta': 'Kostenlose Offerte anfordern',
 
     // Footer
     'footer.rights': 'Alle Rechte vorbehalten.',
@@ -251,7 +251,7 @@ const translations = {
     // Homepage Hero
     'hero.title': 'Votre service de nettoyage suisse de confiance',
     'hero.subtitle': 'Nettoyage professionnel et fiable pour particuliers et entreprises.',
-    'hero.cta': 'Réserver',
+    'hero.cta': 'Demander un devis gratuit',
 
     // Footer
     'footer.rights': 'Tous droits réservés.',
@@ -370,7 +370,7 @@ const translations = {
     // Homepage Hero
     'hero.title': 'Il tuo servizio di pulizia svizzero di fiducia',
     'hero.subtitle': 'Pulizia professionale per case e aziende.',
-    'hero.cta': 'Prenota ora',
+    'hero.cta': 'Richiedi un preventivo gratuito',
 
     // Footer
     'footer.rights': 'Tutti i diritti riservati.',
